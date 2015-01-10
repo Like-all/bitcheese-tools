@@ -377,7 +377,10 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>afplay /System/Library/Sounds/Glass.aiff</string>
+					<string>if [[ `sw_vers -productVersion | cut -f 2 -d '.'` -gt "8" ]]; then
+	osascript -e 'display notification "Image uploaded" with title "Bitcheese.net"'
+fi
+afplay /System/Library/Sounds/Glass.aiff</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -487,8 +490,6 @@
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -502,26 +503,26 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>26F236A0-0E93-4368-9109-2B044FCCA102</key>
+		<key>9337018B-3C7B-498D-BD5C-CFB9C8503EF1</key>
+		<dict>
+			<key>from</key>
+			<string>04DA92D8-18A1-46D2-B9CB-3F7345ED3A3E - 04DA92D8-18A1-46D2-B9CB-3F7345ED3A3E</string>
+			<key>to</key>
+			<string>BC777C8B-23F9-47B8-8885-2557D390CA35 - BC777C8B-23F9-47B8-8885-2557D390CA35</string>
+		</dict>
+		<key>F2DCB60D-7541-4C42-9A99-3628335E55E9</key>
 		<dict>
 			<key>from</key>
 			<string>92FF8AF1-AC33-460E-9529-39370D6150DD - 92FF8AF1-AC33-460E-9529-39370D6150DD</string>
 			<key>to</key>
 			<string>842E5288-2690-488D-AE32-EAC91499F4B4 - 842E5288-2690-488D-AE32-EAC91499F4B4</string>
 		</dict>
-		<key>7938F53B-BFBB-457C-AF05-FEB048EE1C81</key>
+		<key>FD886328-B685-4552-958F-644E60D1020A</key>
 		<dict>
 			<key>from</key>
 			<string>BC777C8B-23F9-47B8-8885-2557D390CA35 - BC777C8B-23F9-47B8-8885-2557D390CA35</string>
 			<key>to</key>
 			<string>92FF8AF1-AC33-460E-9529-39370D6150DD - 92FF8AF1-AC33-460E-9529-39370D6150DD</string>
-		</dict>
-		<key>E5346066-B61B-4B0E-99EF-B66100EEEBD0</key>
-		<dict>
-			<key>from</key>
-			<string>04DA92D8-18A1-46D2-B9CB-3F7345ED3A3E - 04DA92D8-18A1-46D2-B9CB-3F7345ED3A3E</string>
-			<key>to</key>
-			<string>BC777C8B-23F9-47B8-8885-2557D390CA35 - BC777C8B-23F9-47B8-8885-2557D390CA35</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>
