@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>339.2</string>
+	<string>346</string>
 	<key>AMApplicationVersion</key>
-	<string>2.2.4</string>
+	<string>2.3</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -25,7 +25,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>2.1</string>
+				<string>2.1.1</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Finder</string>
@@ -52,7 +52,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Get_Selected_Finder_Items_2</string>
 				<key>CFBundleVersion</key>
-				<string>2.1</string>
+				<string>2.1.1</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -96,7 +96,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>2.0.2</string>
+				<string>2.0.3</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -144,7 +144,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
 				<key>CFBundleVersion</key>
-				<string>2.0.2</string>
+				<string>2.0.3</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -248,7 +248,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>688.000000:916.000000</string>
+				<string>739.500000:668.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/ru.lproj/main.nib</string>
 			</dict>
@@ -271,7 +271,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.2</string>
+				<string>1.2.1</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Система</string>
@@ -293,13 +293,13 @@
 				<key>ActionBundlePath</key>
 				<string>/System/Library/Automator/Copy to Clipboard.action</string>
 				<key>ActionName</key>
-				<string>Копировать в буфер обмена</string>
+				<string>Скопировать в буфер обмена</string>
 				<key>ActionParameters</key>
 				<dict/>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.CopyToClipboard</string>
 				<key>CFBundleVersion</key>
-				<string>1.2</string>
+				<string>1.2.1</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<true/>
 				<key>CanShowWhenRun</key>
@@ -314,7 +314,7 @@
 				<string>A27B5A29-3F12-4750-93EF-D3FB217875D8</string>
 				<key>Keywords</key>
 				<array>
-					<string>Копировать</string>
+					<string>Скопировать</string>
 				</array>
 				<key>OutputUUID</key>
 				<string>B557B88C-9398-4AD3-94A8-9C22928BA239</string>
@@ -326,8 +326,6 @@
 				</array>
 				<key>arguments</key>
 				<dict/>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -341,24 +339,26 @@
 					<true/>
 					<key>Types</key>
 					<array>
-						<string>com.apple.applescript.object</string>
+						<string>com.apple.cocoa.string</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.2.2</string>
+				<string>2.0.3</string>
 				<key>AMApplication</key>
 				<array>
-					<string>GrowlHelperApp</string>
+					<string>Automator</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
-					<key>notificationDescription</key>
+					<key>COMMAND_STRING</key>
 					<dict/>
-					<key>notificationTitle</key>
+					<key>CheckedForUserDefaultShell</key>
 					<dict/>
-					<key>priority</key>
+					<key>inputMethod</key>
 					<dict/>
-					<key>sticky</key>
+					<key>shell</key>
+					<dict/>
+					<key>source</key>
 					<dict/>
 				</dict>
 				<key>AMProvides</key>
@@ -367,76 +367,66 @@
 					<string>List</string>
 					<key>Types</key>
 					<array>
-						<string>com.apple.applescript.object</string>
+						<string>com.apple.cocoa.string</string>
 					</array>
 				</dict>
-				<key>AMRequiredResources</key>
-				<array>
-					<dict>
-						<key>Display Name</key>
-						<string></string>
-						<key>Resource</key>
-						<string>com.Growl.GrowlHelperApp</string>
-						<key>Type</key>
-						<string>application</string>
-						<key>Version</key>
-						<string>1.1</string>
-					</dict>
-				</array>
 				<key>ActionBundlePath</key>
-				<string>/Library/PreferencePanes/Growl.prefPane/Contents/Resources/GrowlHelperApp.app/Contents/Library/Automator/Show Growl Notification.action</string>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
 				<key>ActionName</key>
-				<string>Show Growl Notification</string>
+				<string>Запустить shell-скрипт</string>
 				<key>ActionParameters</key>
 				<dict>
-					<key>notificationDescription</key>
-					<string>Now you can paste URL of image</string>
-					<key>notificationTitle</key>
-					<string>Uploaded</string>
-					<key>priority</key>
+					<key>COMMAND_STRING</key>
+					<string>afplay /System/Library/Sounds/Glass.aiff</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
 					<integer>0</integer>
-					<key>sticky</key>
-					<false/>
+					<key>shell</key>
+					<string>/bin/bash</string>
+					<key>source</key>
+					<string></string>
 				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.growl.GrowlAction</string>
+				<string>com.apple.RunShellScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.2.2</string>
+				<string>2.0.3</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
 				<true/>
 				<key>Category</key>
 				<array>
-					<string>Utility</string>
+					<string>AMCategoryUtilities</string>
 				</array>
 				<key>Class Name</key>
-				<string>AMAppleScriptAction</string>
-				<key>IgnoresInput</key>
-				<true/>
+				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>C602C557-096B-4A19-BA52-657CD8C008D3</string>
+				<string>F48B6F22-A112-437C-A310-6FE37987E278</string>
 				<key>Keywords</key>
 				<array>
-					<string>Growl</string>
-					<string>Notification</string>
+					<string>Shell</string>
+					<string>Скрипт</string>
+					<string>Команда</string>
+					<string>Запустить</string>
+					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>49ED1540-A885-4631-A31A-6F2BF2158E29</string>
+				<string>DC928BBE-F837-4D9A-84E2-B621A9131977</string>
 				<key>UUID</key>
-				<string>5140ED40-D004-4C09-BFA6-480144691C29</string>
+				<string>842E5288-2690-488D-AE32-EAC91499F4B4</string>
 				<key>UnlocalizedApplications</key>
 				<array>
-					<string>GrowlHelperApp</string>
+					<string>Automator</string>
 				</array>
 				<key>arguments</key>
 				<dict>
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string></string>
+						<integer>0</integer>
 						<key>name</key>
-						<string>notificationTitle</string>
+						<string>inputMethod</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -447,9 +437,9 @@
 					<key>1</key>
 					<dict>
 						<key>default value</key>
-						<integer>0</integer>
+						<string></string>
 						<key>name</key>
-						<string>priority</string>
+						<string>source</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -462,7 +452,7 @@
 						<key>default value</key>
 						<false/>
 						<key>name</key>
-						<string>sticky</string>
+						<string>CheckedForUserDefaultShell</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -475,7 +465,7 @@
 						<key>default value</key>
 						<string></string>
 						<key>name</key>
-						<string>notificationDescription</string>
+						<string>COMMAND_STRING</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -483,15 +473,28 @@
 						<key>uuid</key>
 						<string>3</string>
 					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>/bin/sh</string>
+						<key>name</key>
+						<string>shell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
 				</dict>
 				<key>conversionLabel</key>
 				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>688.000000:270.000000</string>
+				<string>739.500000:422.000000</string>
 				<key>nibPath</key>
-				<string>/Library/PreferencePanes/Growl.prefPane/Contents/Resources/GrowlHelperApp.app/Contents/Library/Automator/Show Growl Notification.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/ru.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -499,26 +502,26 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>95F02AE2-C9B5-43C3-B7B7-A8D58C329C50</key>
+		<key>26F236A0-0E93-4368-9109-2B044FCCA102</key>
+		<dict>
+			<key>from</key>
+			<string>92FF8AF1-AC33-460E-9529-39370D6150DD - 92FF8AF1-AC33-460E-9529-39370D6150DD</string>
+			<key>to</key>
+			<string>842E5288-2690-488D-AE32-EAC91499F4B4 - 842E5288-2690-488D-AE32-EAC91499F4B4</string>
+		</dict>
+		<key>7938F53B-BFBB-457C-AF05-FEB048EE1C81</key>
+		<dict>
+			<key>from</key>
+			<string>BC777C8B-23F9-47B8-8885-2557D390CA35 - BC777C8B-23F9-47B8-8885-2557D390CA35</string>
+			<key>to</key>
+			<string>92FF8AF1-AC33-460E-9529-39370D6150DD - 92FF8AF1-AC33-460E-9529-39370D6150DD</string>
+		</dict>
+		<key>E5346066-B61B-4B0E-99EF-B66100EEEBD0</key>
 		<dict>
 			<key>from</key>
 			<string>04DA92D8-18A1-46D2-B9CB-3F7345ED3A3E - 04DA92D8-18A1-46D2-B9CB-3F7345ED3A3E</string>
 			<key>to</key>
 			<string>BC777C8B-23F9-47B8-8885-2557D390CA35 - BC777C8B-23F9-47B8-8885-2557D390CA35</string>
-		</dict>
-		<key>BCA0135C-156D-432D-9744-E4D7BC92B864</key>
-		<dict>
-			<key>from</key>
-			<string>92FF8AF1-AC33-460E-9529-39370D6150DD - 92FF8AF1-AC33-460E-9529-39370D6150DD</string>
-			<key>to</key>
-			<string>5140ED40-D004-4C09-BFA6-480144691C29 - 5140ED40-D004-4C09-BFA6-480144691C29</string>
-		</dict>
-		<key>C585F12A-C770-4869-A748-9A2A55E24649</key>
-		<dict>
-			<key>from</key>
-			<string>BC777C8B-23F9-47B8-8885-2557D390CA35 - BC777C8B-23F9-47B8-8885-2557D390CA35</string>
-			<key>to</key>
-			<string>92FF8AF1-AC33-460E-9529-39370D6150DD - 92FF8AF1-AC33-460E-9529-39370D6150DD</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>
