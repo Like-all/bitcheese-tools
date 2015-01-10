@@ -1,21 +1,26 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 usage()
 {
 	echo "Usage: dump <file|image|text> [file] [language]"
 }
 
+if [[ `uname` == "Darwin" ]]; then
+	copytool="pbcopy"
+else
+	copytool="xclip -i"
+fi
+
 case $1 in
 	file)
 		URL=`curl -w %{redirect_url} -F "file=@$2" http://dump.bitcheese.net/upload-file?simple`
 		echo "$URL [$URL/preview]" 
-		echo -n $URL | xclip -i
+		echo $URL | $copytool
 		;;
 	image)
 		URL=`curl -w %{redirect_url} -F "file=@$2" http://dump.bitcheese.net/upload-image?simple`
 		echo "$URL [$URL/preview]"
-		echo -n $URL | xclip -i
-		notify-send -t 500 "Uploaded" 
+		echo $URL | $copytool
 		;;
 	text)
 		if [ -z $3 ] ; then
@@ -24,7 +29,8 @@ case $1 in
 			LANG=$3
 		fi
 		URL=`curl -w %{redirect_url} -F "lang=$LANG" -F "text=@$2" http://dump.bitcheese.net/upload-text`
-		echo $URL 
+		echo "$URL [$URL/preview]"
+		echo $URL | $copytool
 		;;
 	*) usage;
 esac
